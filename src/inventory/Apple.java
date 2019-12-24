@@ -1,6 +1,6 @@
 package inventory;
 
-public class Apple {
+public class Apple implements Comparable<Apple>{
 
 	private String color;
 	private int weight;
@@ -20,12 +20,16 @@ public class Apple {
 	}
 	
 	
-
 	@Override
 	public String toString() {
 		return "color : " + color +
 				" " +
 				"weight : " + weight;
+	}
+
+	@Override
+	public int compareTo(Apple a) {
+		return a.getWeight();
 	}
 
 }
